@@ -11,8 +11,8 @@ function createFunctions( funcDb, db, mainFuncDb, mainDb, functions ) {
             const displayName = (user.displayName ? user.displayName : null);
             const email = (user.email ? user.email : '');
             return Promise.all([
-                db.ref(`/users/${userId}`).set({displayName: displayName, email: email}),
-                db.ref(`/status/${userId}`).set({verified: false, active: false, host: false, admin: false})
+                mainDb.ref(`/users/${userId}`).set({displayName: displayName, email: email}),
+                mainDb.ref(`/status/${userId}`).set({verified: false, active: false, host: false, admin: false})
             ]);
         });
 
@@ -23,8 +23,8 @@ function createFunctions( funcDb, db, mainFuncDb, mainDb, functions ) {
         .onDelete((user) => {
             const userId = user.uid;
             return Promise.all([
-                db.ref(`/users/${userId}`).set(null),
-                db.ref(`/status/${userId}`).set(null)
+                mainDb.ref(`/users/${userId}`).set(null),
+                mainDb.ref(`/status/${userId}`).set(null)
             ]);
         });
 
