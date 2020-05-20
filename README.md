@@ -1,17 +1,23 @@
-# template-web-component
+# tm-firebase-functions
 
-This is a template for creating new web component repositories.
+This component is used to create a generic set of Firebase functions, 
+which help in the development of PWAs.
 
 ## Installation
 ```bash
-npm install @wonkytech/template-web-component
+npm install @wonkytech/tm-firebase-functions
 ```
 
-## Usage
+## An example of a functions/index.js file
 ```html
-<script type="module">
-  import '@wonkytech/template-web-component';
-</script>
+const databaseName = 'tm-firebase-pwa';
+const appName = 'my-app';
+const includeCronJobs = false;
 
-<template-web-component></template-web-component>
+const functions = require('firebase-functions');
+const admin = require('firebase-admin');
+
+const firebasePWA = require('@wonkytech/tm-firebase-pwa');
+
+Object.assign(exports, firebasePWA.createGenericFunctions(functions, admin, databaseNAme, appName, includeCronJobs));
 ```
