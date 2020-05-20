@@ -1,7 +1,7 @@
 {
     "name": "@wonkytech/tm-firebase-functions",
     "version": "0.0.4",
-    "description": "This is a template for creating new web component repositories.",
+    "description": "Component create a generic set of Firebase functions, which help in the development of PWAs.",
     "author": "Tim McMaster",
     "homepage": "https://tmcmaster.github.io/tm-firebase-functions",
     "license": "MIT",
