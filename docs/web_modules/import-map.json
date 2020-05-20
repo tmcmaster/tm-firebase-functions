@@ -1,5 +1,0 @@
-{
-  "imports": {
-    "@wonkytech/tm-firebase-functions": "./@wonkytech/tm-firebase-functions.js"
-  }
-}
