@@ -1,6 +1,6 @@
 {
     "name": "@wonkytech/tm-firebase-functions",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "Component create a generic set of Firebase functions, which help in the development of PWAs.",
     "author": "Tim McMaster",
     "homepage": "https://tmcmaster.github.io/tm-firebase-functions",
