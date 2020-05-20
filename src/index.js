@@ -3,8 +3,6 @@ import {createFunctions as createCron} from './main/cron.js';
 import {createFunctions as createItem} from './app/item.js';
 import {createFunctions as createJoin} from './app/join.js';
 
-import {Firebase} from '@wonkytech/tm-firebase-service';
-
 function createGenericFunctions(functions, admin, dbName, appName, includeCron) {
 
     const mainApp = admin.initializeApp({databaseURL: `https://${dbName}.firebaseio.com/`}, 'main');
@@ -33,4 +31,4 @@ function createGenericFunctions(functions, admin, dbName, appName, includeCron) 
     return exportMap;
 }
 
-export {Firebase, createGenericFunctions}
+export {createGenericFunctions}
